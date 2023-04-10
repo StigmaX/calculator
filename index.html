@@ -5,33 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <script src="" defer></script>
   </head>
   <body>
     <div id="header">
       <p id="title">Calculator</p>
     </div>
     <div id="calculator-container">
-      <div id="title">Calculator</div>
-      <p id="numbe-container"></p>
       <div id="table">
-        <div id="1">1</div>
-        <div id="2">2</div>
-        <div id="3">3</div>
-        <div id="4">4</div>
-        <div id="5">5</div>
-        <div id="6">6</div>
-        <div id="7">7</div>
-        <div id="8">8</div>
-        <div id="9">9</div>
-        <div id="0">0</div>
-        <div id="+">+</div>
-        <div id="-">-</div>
-        <div id="*">*</div>
-        <div id="/">/</div>
-        <div id="del">del</div>
-        <div id="clear">clr</div>
+        <div class="row">
+          <button id="n1">1</button>
+          <button id="n2">2</button>
+          <button id="n3">3</button>
+          <button id="plus">+</button>
+        </div>
+        <div class="row">
+          <button id="n4">4</button>
+          <button id="n5">5</button>
+          <button id="n6">6</button>
+          <button id="minus">-</button>
+        </div>
+        <div class="row">
+          <button id="n7">7</button>
+          <button id="n8">8</button>
+          <button id="n9">9</button>
+          <button id="n0">0</button>
+        </div>
+        <div class="row">
+          <button id="multiply">*</button>
+          <button id="divide">/</button>
+          <button id="dot">.</button>
+          <button id="del">del</button>
+        </div>
+        <div class="row">
+          <button id="calculate">Calculate</button>
+          <button id="clear">clr</button>
+        </div>
+        <div class="result">
+          <output id="last-number">0</output>
+          <output id="current-number">0</output>
+        </div>
       </div>
-      <button id="calculate">Calculate</button>
     </div>
     <footer id="footer">Made by WildanK</footer>
   </body>
