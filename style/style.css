@@ -30,18 +30,49 @@ body{
 }
 
 #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9,#n0, #plus, #minus, #multiply, #divide, #dot, #del{
-    background-color: rgb(158, 157, 157) ;
     padding: 30px;
+    background-color:gainsboro;
     font-size: 18px;
     margin: 5px 2px;
     border-radius: 10%;
     border: 0;
+    transition: 0.2s;
+}
+
+#n1:hover, #n2:hover, #n3:hover, #n4:hover, #n5:hover, #n6:hover, #n7:hover, #n8:hover, #n9:hover,#n0:hover, #plus:hover, #minus:hover, #multiply:hover, #divide:hover, #dot:hover {
+    background-color: rgb(177, 177, 177) ;
+}
+
+#n1:active, #n2:active, #n3:active, #n4:active, #n5:active, #n6:active, #n7:active, #n8:active, #n9:active,#n0:active, #plus:active, #minus:active, #multiply:active, #divide:active, #dot:active {
+    background-color: rgb(110, 110, 110) ;
 }
 
 #calculate, #clear {
-    background-color: rgb(128, 83, 0);
+    background-color: rgb(161, 111, 17);
     width: 49%;
     border-radius: 10%;
+    border:0;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#calculate:hover{
+    background-color: green;
+    color: #fff;
+}
+
+#calculate:active {
+    background-color:rgb(0, 92, 0);
+}
+
+#del:hover, #clear:hover {
+    background-color: red;
+    color: #fff;
+}
+
+#del:active, #clear:active {
+    background-color: rgb(150, 0, 0);
 }
 
 .result {
