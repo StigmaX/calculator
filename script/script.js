@@ -1,4 +1,5 @@
 const numberBtn = document.querySelectorAll('.btn');
+const dot = document.querySelector('#dot');
 const currentNumber = document.getElementById('current-number');
 const lastNumber = document.getElementById('last-number');
 const numberAddition = document.querySelector('#plus');
@@ -83,7 +84,22 @@ numberMultiplication.addEventListener('click', ()=>{
     }
 })
 numberDivision.addEventListener('click',()=>{
-    currentNumber.textContent+= '/';
+    if(currentNumber.textContent=='') return;
+    if(lastNumber.textContent == '0'){
+        lastNumber.textContent = currentNumber.textContent;
+        lastResult = currentNumber.textContent;
+    }
+    else {
+        lastNumber.textContent += '/'+currentNumber.textContent;
+        const result = +lastResult / +currentNumber.textContent;
+        lastResult = result;
+        currentNumber.textContent = result;
+    }
+})
+
+dot.addEventListener('click',()=>{
+    if(currentNumber.textContent=='') return;
+    else currentNumber.textContent += '.';
 })
 
 function typeNumber(e) {
