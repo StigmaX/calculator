@@ -49,10 +49,12 @@ numberAddition.addEventListener('click', ()=> {
         lastNumber.textContent = currentNumber.textContent;
         lastResult = currentNumber.textContent;
     }
-    else {lastNumber.textContent += '+'+currentNumber.textContent;
-    const result = +currentNumber.textContent + +lastResult;
-    lastResult = result;
-    currentNumber.textContent = result;}
+    else {
+        lastNumber.textContent += '+'+currentNumber.textContent;
+        const result = +currentNumber.textContent + +lastResult;
+        lastResult = result;
+        currentNumber.textContent = result;
+    }
 })
 numberMinus.addEventListener('click', ()=>{
     if(currentNumber.textContent=='') return;
@@ -60,13 +62,25 @@ numberMinus.addEventListener('click', ()=>{
         lastNumber.textContent = currentNumber.textContent;
         lastResult = currentNumber.textContent;
     }
-    else {lastNumber.textContent += '-'+currentNumber.textContent;
-    const result = +lastResult - +currentNumber.textContent;
-    lastResult = result;
-    currentNumber.textContent = result;}
+    else {
+        lastNumber.textContent += '-'+currentNumber.textContent;
+        const result = +lastResult - +currentNumber.textContent;
+        lastResult = result;
+        currentNumber.textContent = result;
+    }
 })
 numberMultiplication.addEventListener('click', ()=>{
-    currentNumber.textContent+= '*';
+    if(currentNumber.textContent=='') return;
+    if(lastNumber.textContent == '0'){
+        lastNumber.textContent = currentNumber.textContent;
+        lastResult = currentNumber.textContent;
+    }
+    else {
+        lastNumber.textContent += '*'+currentNumber.textContent;
+        const result = +lastResult * +currentNumber.textContent;
+        lastResult = result;
+        currentNumber.textContent = result;
+    }
 })
 numberDivision.addEventListener('click',()=>{
     currentNumber.textContent+= '/';
