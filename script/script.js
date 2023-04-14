@@ -17,15 +17,6 @@ numberBtn.forEach((button) => {
     });
 });
 
-// numberAddition.addEventListener('click', ()=> {
-//     if(currentNumber.textContent == '0') return;
-//     const firstNum = currentNumber.textContent;
-//     const secondNum = lastNumber.textContent;
-//     const num = +firstNum + +secondNum;
-//     lastNumber.textContent = num;
-//     currentNumber.textContent = 0;
-// })
-
 calculateNumber.addEventListener('click', ()=>{
     if(currentNumber.textContent==0 || lastNumber.textContent==0)return;
     lastNumber.textContent = eval(currentNumber.textContent);;
@@ -107,3 +98,11 @@ function typeNumber(e) {
     else currentNumber.textContent += e;
     console.log(e);
 }
+
+function getKeyPress(e) {
+    const btnPressed = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    console.log(btnPressed);
+    btnPressed.click();
+}
+
+window.addEventListener('keydown', getKeyPress);

@@ -5,6 +5,7 @@
 body{
     width: 100%;
     height: 100%;
+    font-family: 'Courier New', Courier, monospace;
     background-color: rgb(218, 208, 190);
 }
 #header{
@@ -73,6 +74,16 @@ body{
 
 #del:active, #clear:active {
     background-color: rgb(150, 0, 0);
+}
+
+#last-number{
+    font-size: 20px;
+}
+
+#current-number{
+    font-size: 30px;
+    color:burlywood;
+
 }
 
 .result {
