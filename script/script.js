@@ -94,6 +94,7 @@ dot.addEventListener('click',()=>{
 })
 
 function typeNumber(e) {
+    if(currentNumber.textContent.length > 18) return;
     if(currentNumber.textContent == '0') currentNumber.textContent = e;
     else currentNumber.textContent += e;
 }

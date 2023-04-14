@@ -20,10 +20,10 @@ body{
 }
 
 #calculator-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #calculator-container #number-container {
@@ -124,12 +124,13 @@ body{
 
 #last-number{
     font-size: 20px;
+    word-wrap: break-word;
 }
 
 #current-number{
     font-size: 30px;
     color:burlywood;
-
+    word-wrap: break-word;
 }
 
 .result {
