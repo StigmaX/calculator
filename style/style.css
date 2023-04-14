@@ -145,6 +145,7 @@ body{
 
 #table {
     display: flex;
+    max-width: 380px;
     flex-direction: column-reverse;
     gap: 10px;
     border: 2px solid black;
