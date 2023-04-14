@@ -30,25 +30,50 @@ body{
     border: 1px solid black;
 }
 
-#n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9,#n0, #plus, #minus, #multiply, #divide, #dot, #del{
+.btn, .operator, .delete{
     padding: 30px;
     background-color:gainsboro;
     font-size: 18px;
     margin: 5px 2px;
     border-radius: 10%;
     border: 0;
+    width: 25%;
     transition: 0.2s;
 }
 
-#n1:hover, #n2:hover, #n3:hover, #n4:hover, #n5:hover, #n6:hover, #n7:hover, #n8:hover, #n9:hover,#n0:hover, #plus:hover, #minus:hover, #multiply:hover, #divide:hover, #dot:hover {
+.btn:hover, .operator:hover {
     background-color: rgb(177, 177, 177) ;
 }
 
-#n1:active, #n2:active, #n3:active, #n4:active, #n5:active, #n6:active, #n7:active, #n8:active, #n9:active,#n0:active, #plus:active, #minus:active, #multiply:active, #divide:active, #dot:active {
+.btn:active, .operator:active {
     background-color: rgb(110, 110, 110) ;
 }
 
-#calculate, #clear {
+.btn-active {
+    padding: 30px;
+    background-color:rgb(87, 87, 87);
+    font-size: 18px;
+    margin: 5px 2px;
+    border-radius: 10%;
+    border: 0;
+    width: 25%;
+    transition: 0.2s;
+}
+
+.btn-del {
+    padding: 30px;
+    background-color:rgb(150, 0, 0);
+    font-size: 18px;
+    margin: 5px 2px;
+    border-radius: 10%;
+    border: 0;
+    width: 25%;
+    transition: 0.2s;
+    color: white;
+}
+
+
+.enter, .clear {
     background-color: rgb(161, 111, 17);
     width: 49%;
     border-radius: 10%;
@@ -56,6 +81,27 @@ body{
     padding: 5px;
     font-size: 15px;
     transition: 0.3s;
+}
+
+.enter-active {
+    background-color:rgb(0, 92, 0);
+    width: 49%;
+    border-radius: 10%;
+    border:0;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+.clear-active {
+    background-color:rgb(150, 0, 0);
+    width: 49%;
+    border-radius: 10%;
+    border:0;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #fff;
 }
 
 #calculate:hover{

@@ -10,10 +10,10 @@ const numberDel = document.querySelector('#del');
 const numberClear = document.querySelector('#clear');
 const calculateNumber = document.querySelector('#calculate');
 let lastResult=0;
+
 numberBtn.forEach((button) => {
     button.addEventListener('click', ()=> {
         typeNumber(button.textContent);
-        console.log(button.textContent);
     });
 });
 
@@ -96,13 +96,53 @@ dot.addEventListener('click',()=>{
 function typeNumber(e) {
     if(currentNumber.textContent == '0') currentNumber.textContent = e;
     else currentNumber.textContent += e;
-    console.log(e);
 }
 
 function getKeyPress(e) {
     const btnPressed = document.querySelector(`button[data-key="${e.keyCode}"]`);
-    console.log(btnPressed);
+    if(!btnPressed) return;
+    switch(btnPressed.id){
+        case 'del':
+            btnPressed.classList.remove('delete');
+            btnPressed.classList.add('btn-del');
+            break;        
+        case 'calculate':
+            btnPressed.classList.remove('enter');
+            btnPressed.classList.add('enter-active');
+            break;
+        case 'clear':
+            btnPressed.classList.remove('clear');
+            btnPressed.classList.add('clear-active');
+            break;
+        default:
+            btnPressed.classList.remove('btn');
+            btnPressed.classList.add('btn-active');
+
+    }
     btnPressed.click();
 }
 
+function getKeyRelease(e) {
+    const btnReleased = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    if(!btnReleased) return;
+    switch(btnReleased.id){
+        case 'del':
+            btnReleased.classList.remove('btn-del');
+            btnReleased.classList.add('delete');
+            break;
+        case 'calculate':
+            btnReleased.classList.remove('enter-active');
+            btnReleased.classList.add('enter');
+            break;
+        case 'clear':
+            btnReleased.classList.remove('clear-active');
+            btnReleased.classList.add('clear');
+            break;
+        default:
+            btnReleased.classList.remove('btn-active');
+            btnReleased.classList.add('btn');
+    }
+}
+
 window.addEventListener('keydown', getKeyPress);
+window.addEventListener('keyup', getKeyRelease);
