@@ -9,8 +9,8 @@ body{
     background-color: rgb(218, 208, 190);
 }
 #header{
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
 }
 
 #header #title {
@@ -23,7 +23,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 20%;
+    min-width: fit-content;
 }
 
 #calculator-container #number-container {
@@ -162,5 +163,6 @@ body{
     width: 100%;
     text-align: center;
     bottom: 0;
+    margin-top: 5px;
     font-weight:bold;
 }
